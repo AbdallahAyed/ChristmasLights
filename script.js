@@ -7,8 +7,8 @@ const durationRange = document.getElementById("duration");
 // Create an array of random delays
 const delays = [3, 4, 1, 2, 6, 5];
 
-sizeRange.addEventListener("change", changeSize);
-durationRange.addEventListener("change", (e) => {});
+sizeRange.addEventListener("change", (e) => changeSize);
+durationRange.addEventListener("change", (e) => changeDurantion);
 onButton.addEventListener("click", startAnimation);
 offButton.addEventListener("click", stopAnimation);
 
@@ -28,13 +28,13 @@ function startAnimation() {
     fade.style.animationDelay = `${randomDelay}s`;
   });
 }
-function changeSize() {
+function changeSize(e) {
   lamps.forEach((lamp) => {
     lamp.style.setProperty("width", `${e.target.value}px`);
     lamp.style.setProperty("height", `${e.target.value}px`);
   });
 }
-function changeDurantion() {
+function changeDurantion(e) {
   fadeElements.forEach((fade) => {
     fade.style.animationDuration = `${e.target.value}s`;
   });
