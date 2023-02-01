@@ -7,8 +7,8 @@ const durationRange = document.getElementById("duration");
 // Create an array of random delays
 const delays = [3, 4, 1, 2, 6, 5];
 
-sizeRange.addEventListener("change", (e) => changeSize);
-durationRange.addEventListener("change", (e) => changeDurantion);
+sizeRange.addEventListener("change", changeSize);
+durationRange.addEventListener("change", changeDurantion);
 onButton.addEventListener("click", startAnimation);
 offButton.addEventListener("click", stopAnimation);
 
